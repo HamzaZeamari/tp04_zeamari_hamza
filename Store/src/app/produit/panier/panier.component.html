@@ -1,5 +1,5 @@
 
-<p>Catalogue</p>
+<p>Panier</p>
 <div *ngFor="let c of panier$ | async">
   {{ c.nom }} <button (click)="DelPanier(c)">-</button>
 </div>

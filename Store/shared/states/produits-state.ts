@@ -23,6 +23,10 @@ export class ProduitState {
   static getListePanier(state: ProduitStateModel) {
     return state.panier;
   }
+  @Selector()
+  static getNbPanier(state: ProduitStateModel) {
+    return state.panier.length;
+  }
 
   @Action(AddProduit)
   add(

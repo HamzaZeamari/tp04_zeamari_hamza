@@ -12,5 +12,7 @@ export class AppComponent {
   title = 'Store';
 
   @Select(ProduitState.getNbProduits) nb$!: Observable<number>;
+  @Select(ProduitState.getNbPanier) nbP$!: Observable<number>;
+
   constructor() {}
 }
