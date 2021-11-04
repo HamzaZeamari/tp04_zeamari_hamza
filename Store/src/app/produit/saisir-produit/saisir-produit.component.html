@@ -1,0 +1,17 @@
+<p>Saisie contact</p>
+
+<form [formGroup]="produitForm">
+  <label>Nom : <input type="text" formControlName="nom" /></label>
+  <br />
+  <label>Id : <input type="text" formControlName="id" /></label>
+  <br />
+
+  <label>Prix : <input type="text" formControlName="prix" /></label>
+  <br />
+ 
+
+  <button (click)="addProduit()">Ajouter</button>
+</form>
+
+<br />
+<app-liste-produits></app-liste-produits>
