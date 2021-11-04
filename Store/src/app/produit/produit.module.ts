@@ -9,6 +9,7 @@ import { ProduitComponent } from './produit/produit.component';
 import { SaisirProduitComponent } from './saisir-produit/saisir-produit.component';
 
 import { ProduitState } from '../../../shared/states/produits-state';
+import { PanierComponent } from './panier/panier.component';
 
 const appChild: Routes = [
   {
@@ -24,6 +25,11 @@ const appChild: Routes = [
     path: 'Produit/:id',
     component: ProduitComponent,
   },
+  {
+    path: 'panier',
+    component: PanierComponent,
+
+  },
 ];
 @NgModule({
   imports: [
@@ -37,6 +43,8 @@ const appChild: Routes = [
     ListeProduitsComponent,
     ProduitComponent,
     SaisirProduitComponent,
+    PanierComponent,
+
   ],
 })
 export class ProduitsModule {}

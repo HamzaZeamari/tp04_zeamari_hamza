@@ -3,7 +3,8 @@ import { Produit } from 'shared/models/produit';
 import { ProduitStateModel } from 'shared/states/produit-state-model';
 import { ProduitState } from 'shared/states/produits-state';
 import { Observable } from 'rxjs';
-import { Select } from '@ngxs/store';
+import { Select, Store } from '@ngxs/store';
+import { AddPanier } from 'shared/actions/produit-action';
 
 
 @Component({
@@ -14,9 +15,13 @@ import { Select } from '@ngxs/store';
 export class ListeProduitsComponent implements OnInit {
 
 
-  constructor() {}
+  constructor(private store: Store) { }
 
   @Select(ProduitState.getListeProduits) liste$!: Observable<Produit[]>;
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
+  AddPanier(c: Produit) {
+    this.store.dispatch(new AddPanier(c));
+  }
 }

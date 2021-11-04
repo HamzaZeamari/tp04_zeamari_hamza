@@ -22,6 +22,7 @@ export class SaisirProduitComponent implements OnInit {
   }
 
   ngOnInit() {}
+  
   addProduit() {
     let nom: string = this.produitForm.value['nom'];
     let id: number = this.produitForm.value['id'];
@@ -44,4 +45,5 @@ export class SaisirProduitComponent implements OnInit {
 
     this.store.dispatch(new AddProduit(produit));
   }
+  
 }

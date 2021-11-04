@@ -2,4 +2,5 @@
 
 <div *ngFor="let c of liste$ | async">
   {{ c.nom }}
+  <button (click)="AddPanier(c)">Ajouter</button>
 </div>

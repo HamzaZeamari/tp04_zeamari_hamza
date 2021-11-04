@@ -5,3 +5,16 @@ export class AddProduit {
 
   constructor(public payload: Produit) {}
 }
+
+export class DelProduit {
+  static readonly type = '[Produit] Del';
+
+  constructor(public payload: Produit) {}
+}
+
+
+export class AddPanier {
+  static readonly type = '[Produit] AddPanier';
+
+  constructor(public payload: Produit) {}
+}

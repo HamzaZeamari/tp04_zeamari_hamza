@@ -13,7 +13,7 @@ const appRoutes: Routes = [
   {
     path: 'produit',
     loadChildren: () =>
-      import('./produit/produit/produit.module').then((m) => m.ProduitsModule),
+      import('./produit/produit.module').then((m) => m.ProduitsModule),
   },
 ];
 
