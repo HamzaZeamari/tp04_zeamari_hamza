@@ -48,13 +48,13 @@ export class ProduitState {
   
 
   @Action(DelProduit)
-  delete(
+  del(
     { getState, patchState }: StateContext<ProduitStateModel>,
     { payload }: DelProduit
   ) {
     const state = getState();
     patchState({
-      produits: state.produits.filter((produit)=>{produit.id != payload.id}),
+      panier: state.panier.filter((produit)=>{produit.id != payload.id}),
     });
   }
 }
