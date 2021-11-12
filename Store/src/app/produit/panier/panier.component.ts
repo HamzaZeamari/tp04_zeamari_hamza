@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
-import { DelProduit } from 'shared/actions/produit-action';
+import { DelPanier, DelProduit } from 'shared/actions/produit-action';
 import { Produit } from 'shared/models/produit';
 import { ProduitState } from 'shared/states/produits-state';
 
@@ -21,7 +21,7 @@ export class PanierComponent implements OnInit {
   }
 
   DelPanier(c: Produit) {
-    this.store.dispatch(new DelProduit(c));
+    this.store.dispatch(new DelPanier(c));
   }
 
 }

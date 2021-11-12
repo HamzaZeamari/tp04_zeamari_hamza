@@ -1,0 +1,7 @@
+[
+    {  "nom": "ProduitTest1", "id": 1, "prix": "10" },
+    {  "nom": "ProduitTest2", "id": 2, "prix": "20" },
+    {  "nom": "ProduitTest3", "id": 3, "prix": "40" },
+    {  "nom": "ProduitTest4", "id": 4, "prix": "100" }
+]
+  

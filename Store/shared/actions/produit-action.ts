@@ -12,6 +12,11 @@ export class DelProduit {
   constructor(public payload: Produit) {}
 }
 
+export class DelPanier {
+  static readonly type = '[Produit] DelPanier';
+
+  constructor(public payload: Produit) {}
+}
 
 export class AddPanier {
   static readonly type = '[Produit] AddPanier';

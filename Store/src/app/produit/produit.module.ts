@@ -10,6 +10,7 @@ import { SaisirProduitComponent } from './saisir-produit/saisir-produit.componen
 
 import { ProduitState } from '../../../shared/states/produits-state';
 import { PanierComponent } from './panier/panier.component';
+import { DetailComponent } from './detail/detail.component';
 
 const appChild: Routes = [
   {
@@ -23,7 +24,7 @@ const appChild: Routes = [
 
   {
     path: 'Produit/:id',
-    component: ProduitComponent,
+    component: DetailComponent,
   },
   {
     path: 'panier',
@@ -44,6 +45,7 @@ const appChild: Routes = [
     ProduitComponent,
     SaisirProduitComponent,
     PanierComponent,
+    DetailComponent,
 
   ],
 })

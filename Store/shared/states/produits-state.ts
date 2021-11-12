@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
-import { AddProduit , DelProduit, AddPanier} from '../actions/produit-action';
+import { AddProduit , DelProduit, AddPanier, DelPanier} from '../actions/produit-action';
 import { ProduitStateModel } from './produit-state-model';
 @State<ProduitStateModel>({
   name: 'produits',
@@ -58,7 +58,18 @@ export class ProduitState {
   ) {
     const state = getState();
     patchState({
-      panier: state.panier.filter((produit)=>{produit.id != payload.id}),
+      produits: state.produits.filter(product => product.id != payload.id),
+    });
+  }
+
+  @Action(DelPanier)
+  delPanier(
+    { getState, patchState }: StateContext<ProduitStateModel>,
+    { payload }: DelPanier
+  ) {
+    const state = getState();
+    patchState({
+      panier: state.panier.filter(panier => panier.id != payload.id),
     });
   }
 }

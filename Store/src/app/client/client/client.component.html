@@ -1,0 +1,20 @@
+<h1 class="mt-5">Client</h1>
+
+<form class="fs-3" [formGroup]="adresseFormulaire">
+    <label>Ville : <input type="text" formControlName="ville"></label>  
+    <br/>
+    <label>Adresse : <input type="text" formControlName="adresse"></label>
+    <br/>
+    <label>Code postal : <input type="text" formControlName="CP"></label>
+    <br/>  
+    
+    <button (click)="addAdresse()">Sauvegarder</button>
+</form>
+
+<h1>Liste d'adresses : </h1>
+<div *ngFor="let a of adresses$ | async">
+    <p>
+        {{ a.adresse }} {{ a.cp }} {{ a.ville }}
+        <button (click)="delAdresse(a)" class="ms-2">Supprimer adresse</button>
+    </p>
+</div>

@@ -1,6 +1,9 @@
-<p>Catalogue</p>
-
-<div *ngFor="let c of liste$ | async">
-  {{ c.nom }}
-  <button (click)="AddPanier(c)">Ajouter</button>
+<h1>Catalogue</h1>
+<div *ngFor="let produit of produits$ | async">
+    <div>
+        <p>
+            <a [routerLink]="['/produit/produit', produit.id]">{{ produit.nom }}</a>
+            <button (click)="AddPanier(produit)">Ajouter au panier</button>
+        </p>
+    </div>
 </div>
